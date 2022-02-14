@@ -10,11 +10,13 @@ PREMADE PROTEX FILE (STILL REQUIRES MANUAL INSTALLATION OF THE SEP FILE): https:
  - Disable Background Script
  - Crash (Block & Notify)
  - Block Script Event Kick
+ - Block Desync Kick
  - Block Reports
  - Block Attach Clusters
  - Block Collectible Drops (Block & Notify)
  - Block Money Drops (Block & Notify
  - Block Attachments (Block & Notify)
+ - Block Ptfx On You (Block & Notify)
  - Block Cage Objects (Block & Notify)
  - Block Clones (Block)
  - Block Model Changes (Block & Notify)
@@ -35,15 +37,22 @@ PREMADE PROTEX FILE (STILL REQUIRES MANUAL INSTALLATION OF THE SEP FILE): https:
 ## Ped Throttling
  - Enable
  - Cleanup
- - Interval (Seconds) = 5
- - Limit = 5
+ - Interval (Seconds) = 5 - 10 seconds
+ - Limit = 7
  - Radius = 50.00
 
 ## Vehicle Throttling
  - Enable
  - Cleanup
- - Interval (Seconds) = 5
- - Limit = 7
+ - Interval (Seconds) = 5 - 10 seconds
+ - Limit = 8
+ - Radius = 50.00
+
+## Object Throttling
+ - Enable
+ - Cleanup
+ - Interval (Seconds) = 5 - 10 seconds
+ - Limit = 10
  - Radius = 50.00
 
 ## Rockstar Admin
@@ -52,17 +61,16 @@ PREMADE PROTEX FILE (STILL REQUIRES MANUAL INSTALLATION OF THE SEP FILE): https:
  - By IP (Notify)
 
 ## Modder Detection
-TURN OFF WHITELIST FRIENDS IN YOUR DUMB CRASH WARS
  - Turn off "Disable Area Local Object Detection"
- - Detect SCID Spoof
+ - Detect Session Mismatch
  - Detect Altered Host Token
  - Detect Player Model
  - Detect Super Jump
- - Detect Towtrucks
  - SE Spam (10 - 15)
 
 ## Mission Launcher
  - Block Mission Launch (Block & Notify)
+OPTIONAL TO WHITELIST FREEMODE EVENTS
 
 ## Net Hooks
 Script Event Log (Optional)
@@ -70,24 +78,21 @@ Net Event Log (Optional)
 
 ## Script Events
  - Kick (Block & Notify)
+ - Uh oh spaghettios (Block & Notify)
+ - Malicious Crash (Block & Notify)
  - Invalid Apartment Invite (Block & Notify)
  - Vehicle Kick (Block & Notify)
- - Force Off radar (Block & Notify)
- - Casino Cutscene (Block & Notify)
  - CEO Kick (Block & Notify)
- - Send To Job (Block & Notify)
- - Spectate Message (Block & Notify)
- - Camera Manipulation (Block)
- - Sound Spam (Block & Notify)
  - Transaction Error (Block & Notify)
  - Apartment Invite (Block & Notify)
- - Force Bribe Authorities (Block & Notify)
- - Insurance Fraud (Block & Notify)
- - Force Into Deathmatch (Block & Notify)
- - Indirect SH Kick (Block & Notify)
- - General Bad Events (Block & Notify)
- - Crash (Block & Notify)
- - Dodgy Events (Optional)
+ - Send To Island (Block & Notify)
+ - Wanted Level Modification (Block & Notify)
+ - Force OTR (Block & Notify)
+ - Camera Manipulation (Block)
+ - Scripted Sound Event (Block & Notify)
+ - Passive Mode Manipulation (Block & Notify)
+ - Casino Cutscene (Block & Notify)
+ - Indirect SH Kicks (Block & Notify)
 
 ## Network Events
  - NET_CLEAR_PED_TASKS (Block & Notify)
@@ -101,6 +106,7 @@ Net Event Log (Optional)
  - ALTER_WANTED_LEVEL (Block & Notify)
  - RAGDOLL_REQUEST (Block & Notify)
  - REQUEST_PHONE_EXPLOSION (Block & Notify)
+ - NET_PLAY_SOUND (Block & Notify)
 
 ## Network Event Notifies
  - KICK_VOTES (Notify)
@@ -108,3 +114,6 @@ Net Event Log (Optional)
  - NET_CHECK_EXE_SIZE (Notify)
  - NET_CHECK_CODES_CRC (Notify)
  - REPORT_MYSELF (Notify)
+
+## Explanation
+The reason why you block this many events is due to how buggy the game is and how you can crash and kick anyone with almost anything, it's insanity and it's something you cannot win
